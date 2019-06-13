@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class EmployeeStats {
 
     double averageSalary(Employee[] employees){
@@ -35,10 +37,10 @@ public class EmployeeStats {
         }return salary;
     }
 
-    int employeeNumber(Employee[] employees, String department){
+    long employeeNumber(Employee[] employees, String department){
         int count=0;
         for (int i = 0; i <employees.length ; i++) {
-            if(employees[i].getDepartment()==department) {
+           if(employees[i].getDepartment().equals(department)) {
                 count++;
             }
         }
